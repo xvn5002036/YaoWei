@@ -1,150 +1,149 @@
-# Site Configuration
+# 網站配置  
 
-# Theme, mapped to the directory: ./theme/xxxx
-theme: default
+# 主題名稱，對應至目錄：./theme/xxxx  
+theme: default  
 
-# HTML Language setting
-lang: "tw"
+# HTML 語言設定  
+lang: "en"  
 
-# Plugins, implemented in ./plugins/PLUGIN_NAME
-# Use {{ vars.PLUGIN_NAME }} in the settings below
+# 插件（實作於 ./plugins/PLUGIN_NAME）  
+# 在下方設定中使用 {{ vars.PLUGIN_NAME }}  
 
-# The output of the plugin can be used below, e.g., {{vars.MediumFollowersCountPlugin}}
-plugins:
-  # Automatically fetch Medium follower count
-  - MediumFollowersCountPlugin:
-      username: YaoWei
-  # Automatically fetch Github repo star count
-  - GithubRepoStarsCountPlugin:
-      - ZhgChgLi/ZMarkupParser
-      - ZhgChgLi/ZReviewTender
-      - ZhgChgLi/ZMediumToMarkdown
-      - ZhgChgLi/linkyee
+# 插件的輸出結果可在下方使用，例如：{{vars.MediumFollowersCountPlugin}}  
+plugins:  
+  # 自動獲取 Medium 的追蹤者數量  
+  - MediumFollowersCountPlugin:  
+      username: YaoWei  
+  # 自動獲取 GitHub 倉庫的星標數量  
+  - GithubRepoStarsCountPlugin:  
+      - YaoWei/ZMarkupParser  
+      - YaoWei/ZReviewTender  
+      - YaoWei/ZMediumToMarkdown  
+      - YaoWei/linkyee  
 
-# Google Analytics tracking id
-google_analytics_id:
+# Google Analytics 追蹤 ID  
+google_analytics_id:  
 
-# HTML Title
-title: "ZhgChgLi's Links"
+# HTML 標題  
+title: "YaoWei 的連結集"  
 
-# Avatar image path
-avatar: "./images/profile.jpeg"
+# 頭像圖片路徑  
+avatar: "./images/profile.jpeg"  
 
-# Name section text
-name: "@zhgchgli"
+# 名稱區塊文字  
+name: "@YaoWei"  
 
-# Tagline section text
-tagline: >-
-    An iOS, web, and automation developer from Taiwan 🇹🇼 who also loves sharing, traveling, and writing.
+# 標語區塊文字  
+tagline: >-  
+    一位來自台灣的 iOS、網頁與自動化開發者，熱愛分享、旅行與寫作。  
 
-# List of links
-# icon: Use Font Awesome icons (https://fontawesome.com/search?o=r&m=free)
-# text: The displayed text for the link
-# title: The url title
-# url: The URL of the link
-# alt: Alternative text for accessibility
-# target: `_blank` opens in a new tab, `_self` opens in the same frame
-links:
-  - link:
-      icon: "fa-brands fa-medium"
-      text: "Tech Blog <span class='link-button-text'>({{vars.MediumFollowersCountPlugin}} Followers)</span>"
-      url: "https://blog.zhgchg.li"
-      alt: "ZhgChgLi's Tech Blog"
-      title: "ZhgChgLi's Tech Blog"
-      target: "_blank"
-  - link:
-      icon: "fa-brands fa-medium"
-      text: "Travelog <span class='link-button-text'>({{vars.MediumFollowersCountPlugin}} Followers)</span>"
-      url: "https://medium.com/ztravel"
-      alt: "ZhgChgLi's Travelog"
-      title: "ZhgChgLi's Travelog"
-      target: "_blank"
-  - link:
-      icon: "fa-solid fa-rss"
-      text: "Website"
-      url: "https://zhgchg.li/"
-      alt: "ZhgChgLi's Website"
-      title: "ZhgChgLi's Website"
-      target: "_blank"
-  - link:
-      icon: "fa-brands fa-swift"
-      text: "ZMarkupParser <span class='link-button-text'>({{vars.GithubRepoStarsCountPlugin['ZhgChgLi/ZMarkupParser']}} Stars)</span>"
-      url: "https://github.com/ZhgChgLi/ZMarkupParser"
-      alt: "ZMarkupParser is a pure-Swift library that helps you to convert HTML strings to NSAttributedString with customized style and tags."
-      title: "ZMarkupParser is a pure-Swift library that helps you to convert HTML strings to NSAttributedString with customized style and tags."
-      target: "_blank"
-  - link:
-      icon: "fa-brands fa-app-store-ios"
-      text: "ZReviewTender <span class='link-button-text'>({{vars.GithubRepoStarsCountPlugin['ZhgChgLi/ZReviewTender']}} Stars)</span>"
-      url: "https://github.com/ZhgChgLi/ZReviewTender"
-      alt: "ZReviewTender is a tool for fetching app reviews from the App Store and Google Play Console and integrating them into your workflow."
-      title: "ZReviewTender is a tool for fetching app reviews from the App Store and Google Play Console and integrating them into your workflow."
-      target: "_blank"
-  - link:
-      icon: "fa-brands fa-markdown"
-      text: "ZMediumToMarkdown <span class='link-button-text'>({{vars.GithubRepoStarsCountPlugin['ZhgChgLi/ZMediumToMarkdown']}} Stars)</span>"
-      url: "https://github.com/ZhgChgLi/ZMediumToMarkdown"
-      alt: "ZMediumToMarkdown is a powerful tool that allows you to effortlessly download and convert your Medium posts to Markdown format."
-      title: "ZMediumToMarkdown is a powerful tool that allows you to effortlessly download and convert your Medium posts to Markdown format."
-      target: "_blank"
-  - link:
-      icon: "fa-brands fa-github"
-      text: "linkyee <span class='link-button-text'>({{vars.GithubRepoStarsCountPlugin['ZhgChgLi/linkyee']}} Stars)</span>"
-      url: "https://github.com/ZhgChgLi/linkyee"
-      alt: "linkyee is a fully customized, open-source LinkTree alternative deployed directly on GitHub Pages."
-      title: "linkyee is a fully customized, open-source LinkTree alternative deployed directly on GitHub Pages."
-      target: "_blank"
+# 連結列表  
+# icon：使用 Font Awesome 圖示 (https://fontawesome.com/search?o=r&m=free)  
+# text：顯示在連結上的文字  
+# title：連結的標題  
+# url：連結的網址  
+# alt：替代文字（無障礙使用）  
+# target：`_blank` 在新頁籤打開，`_self` 在同頁面打開  
+links:  
+  - link:  
+      icon: "fa-brands fa-medium"  
+      text: "技術部落格 <span class='link-button-text'>({{vars.MediumFollowersCountPlugin}} Followers)</span>"  
+      url: "https://blog.zhgchg.li"  
+      alt: "YaoWei 的技術部落格"  
+      title: "YaoWei 的技術部落格"  
+      target: "_blank"  
+  - link:  
+      icon: "fa-brands fa-medium"  
+      text: "旅行日誌 <span class='link-button-text'>({{vars.MediumFollowersCountPlugin}} Followers)</span>"  
+      url: "https://medium.com/ztravel"  
+      alt: "YaoWei 的旅行日誌"  
+      title: "YaoWei 的旅行日誌"  
+      target: "_blank"  
+  - link:  
+      icon: "fa-solid fa-rss"  
+      text: "個人網站"  
+      url: "https://zhgchg.li/"  
+      alt: "YaoWei 的網站"  
+      title: "YaoWei 的網站"  
+      target: "_blank"  
+  - link:  
+      icon: "fa-brands fa-swift"  
+      text: "ZMarkupParser <span class='link-button-text'>({{vars.GithubRepoStarsCountPlugin['YaoWei/ZMarkupParser']}} Stars)</span>"  
+      url: "https://github.com/YaoWei/ZMarkupParser"  
+      alt: "ZMarkupParser 是一個純 Swift 庫，用於將 HTML 字串轉換為具自訂樣式的 NSAttributedString。"  
+      title: "ZMarkupParser 是一個純 Swift 庫，用於將 HTML 字串轉換為具自訂樣式的 NSAttributedString。"  
+      target: "_blank"  
+  - link:  
+      icon: "fa-brands fa-app-store-ios"  
+      text: "ZReviewTender <span class='link-button-text'>({{vars.GithubRepoStarsCountPlugin['YaoWei/ZReviewTender']}} Stars)</span>"  
+      url: "https://github.com/YaoWei/ZReviewTender"  
+      alt: "ZReviewTender 是一個從 App Store 和 Google Play Console 獲取應用評論並整合至工作流程的工具。"  
+      title: "ZReviewTender 是一個從 App Store 和 Google Play Console 獲取應用評論並整合至工作流程的工具。"  
+      target: "_blank"  
+  - link:  
+      icon: "fa-brands fa-markdown"  
+      text: "ZMediumToMarkdown <span class='link-button-text'>({{vars.GithubRepoStarsCountPlugin['YaoWei/ZMediumToMarkdown']}} Stars)</span>"  
+      url: "https://github.com/YaoWei/ZMediumToMarkdown"  
+      alt: "ZMediumToMarkdown 是一個強大的工具，可輕鬆下載並將 Medium 文章轉換為 Markdown 格式。"  
+      title: "ZMediumToMarkdown 是一個強大的工具，可輕鬆下載並將 Medium 文章轉換為 Markdown 格式。"  
+      target: "_blank"  
+  - link:  
+      icon: "fa-brands fa-github"  
+      text: "linkyee <span class='link-button-text'>({{vars.GithubRepoStarsCountPlugin['YaoWei/linkyee']}} Stars)</span>"  
+      url: "https://github.com/YaoWei/linkyee"  
+      alt: "linkyee 是一個完全自訂且開源的 LinkTree 替代方案，可直接部署在 GitHub Pages 上。"  
+      title: "linkyee 是一個完全自訂且開源的 LinkTree 替代方案，可直接部署在 GitHub Pages 上。"  
+      target: "_blank"  
 
+# 社交媒體連結列表  
+# icon：使用 Font Awesome 圖示 (https://fontawesome.com/search?o=r&m=free)  
+# title：連結的標題  
+# url：社交媒體連結的網址  
+# alt：替代文字（無障礙使用）  
+# target：`_blank` 在新頁籤打開，`_self` 在同頁面打開  
+socials:  
+  - social:  
+      icon: "fa-brands fa-medium"  
+      url: "https://blog.zhgchg.li"  
+      title: "YaoWei 的 Medium"  
+      alt: "YaoWei 的 Medium"  
+      target: "_blank"  
+  - social:  
+      icon: "fa-brands fa-github"  
+      url: "https://github.com/YaoWei"  
+      title: "YaoWei 的 GitHub"  
+      alt: "YaoWei 的 GitHub"  
+      target: "_blank"  
+  - social:  
+      icon: "fa-brands fa-twitter"  
+      url: "https://twitter.com/YaoWei"  
+      title: "YaoWei 的 Twitter"  
+      alt: "YaoWei 的 Twitter"  
+      target: "_blank"  
+  - social:  
+      icon: "fa-brands fa-linkedin"  
+      url: "https://www.linkedin.com/in/YaoWei/"  
+      title: "YaoWei 的 LinkedIn"  
+      alt: "YaoWei 的 LinkedIn"  
+      target: "_blank"  
+  - social:  
+      icon: "fa-brands fa-instagram"  
+      url: "https://www.instagram.com/YaoWei/"  
+      title: "Instagram"  
+      alt: "YaoWei 的 Instagram"  
+      target: "_blank"  
+  - social:  
+      icon: "fa-solid fa-envelope"  
+      url: "YaoWei@gmail.com"  
+      title: "Email: YaoWei@gmail.com"  
+      alt: "YaoWei@gmail.com"  
+      target: "_blank"  
 
-# List of social media links
-# icon: Use Font Awesome icons (https://fontawesome.com/search?o=r&m=free)
-# title: The url title
-# url: The URL of the social media link
-# alt: Alternative text for accessibility
-# target: _blank opens in a new tab, _self opens in the same frame
-socials:
-  - social:
-      icon: "fa-brands fa-medium"
-      url: "https://blog.zhgchg.li"
-      title: "ZhgChgLi's Medium"
-      alt: "ZhgChgLi's Medium"
-      target: "_blank"
-  - social:
-      icon: "fa-brands fa-github"
-      url: "https://github.com/ZhgChgLi"
-      title: "ZhgChgLi's GitHub"
-      alt: "ZhgChgLi's GitHub"
-      target: "_blank"
-  - social:
-      icon: "fa-brands fa-twitter"
-      url: "https://twitter.com/zhgchgli"
-      title: "ZhgChgLi's Twitter"
-      alt: "ZhgChgLi's Twitter"
-      target: "_blank"
-  - social:
-      icon: "fa-brands fa-linkedin"
-      url: "https://www.linkedin.com/in/zhgchgli/"
-      title: "ZhgChgLi's LinkedIn"
-      alt: "ZhgChgLi's LinkedIn"
-      target: "_blank"
-  - social:
-      icon: "fa-brands fa-instagram"
-      url: "https://www.instagram.com/zhgchgli/"
-      title: "Instagram"
-      alt: "ZhgChgLi's Instagram"
-      target: "_blank"
-  - social:
-      icon: "fa-solid fa-envelope"
-      url: "mailto:zhgchgli@gmail.com"
-      title: "Email: zhgchgli@gmail.com"
-      alt: "zhgchgli@gmail.com"
-      target: "_blank"
+# 頁尾文字  
+footer: >  
+    歡迎來到我的網站！追蹤我在 Medium 或 GitHub 上的最新動態，或在 Instagram 和 LinkedIn 上保持聯繫。  
 
-# Footer text
-footer: >
-    Hi there! Follow me on Medium or GitHub, or stay connected on Instagram or LinkedIn.
-
-# Footer copyright message
-# Linkyee is a 100% free, open-source project—feel free to modify the copyright message as you like. :)
-copyright: >
-  © 2024  <a href="https://link.zhgchg.li" target="_blank">ZhgChgLi</a>. Powered by <a href="https://github.com/ZhgChgLi/linkyee" target="_blank">linkyee</a>
+# 頁尾版權聲明  
+# Linkyee 是一個 100% 免費的開源專案—您可以隨意修改版權聲明。:)  
+copyright: >  
+  © 2024 <a href="https://zhgchg.li" target="_blank">YaoWei</a>。由 <a href="https://github.com/YaoWei/linkyee" target="_blank">linkyee</a> 提供技術支持。
